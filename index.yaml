@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  sabnzbd:
+  - apiVersion: v1
+    appVersion: 2.3.6
+    created: 2019-01-13T00:55:55.6014992+01:00
+    description: A Helm chart for SABnzbd on ARM
+    digest: 3cd49d499d8b67994cf15d3452afb7ad0bf0bdc489de74b31f7bd6d149daf960
+    icon: https://dl2.macupdate.com/images/icons256/25236.png
+    name: sabnzbd
+    urls:
+    - https://whizzosoftware.github.io/helm-repo-arm/sabnzbd-0.1.0.tgz
+    version: 0.1.0
+generated: 2019-01-13T00:55:55.6004972+01:00
