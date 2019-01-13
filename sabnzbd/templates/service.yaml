@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "sabnzbd.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
+    helm.sh/chart: {{ include "sabnzbd.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port }} {{ if (eq .Values.service.type "NodePort") }}
+      nodePort: {{ .Values.service.nodePort }}{{ end }}
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "sabnzbd.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
