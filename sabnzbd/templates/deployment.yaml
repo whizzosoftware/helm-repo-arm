@@ -47,6 +47,8 @@ spec:
             periodSeconds: 300
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+      securityContext:
+        fsGroup: 1000
       volumes:
       - name: sabnzbd-config
         persistentVolumeClaim:
