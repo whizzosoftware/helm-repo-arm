@@ -8,7 +8,7 @@ Use at your own risk!
 
 To install this repository in Helm, run:
 
-````helm repo index helm-repo-arm --url https://whizzosoftware.github.io/helm-repo-arm/````
+````helm repo add helm-repo-arm https://whizzosoftware.github.io/helm-repo-arm/````
 
 To install a Helm chart from the repo (for example sabnzbd), run:
 
